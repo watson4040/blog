@@ -1,373 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashmy's Food | Shawarma, Cakes & Chapati | Lusaka</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #fef8f0;
-            color: #2d2d2d;
-            scroll-padding-top: 80px;
-        }
-        /* Navbar with wider brand spacing */
-        .navbar {
-            background: #ffffff;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-            padding: 0.8rem 0;
-        }
-        .navbar-brand {
-            font-weight: 800;
-            font-size: 1.7rem;
-            color: #e67e22 !important;
-            letter-spacing: 1.5px;
-            word-spacing: 6px;
-        }
-        .navbar-brand span {
-            color: #2c3e50;
-            letter-spacing: inherit;
-        }
-        .nav-link {
-            font-weight: 600;
-            color: #2c3e50 !important;
-            margin: 0 0.5rem;
-            transition: 0.3s;
-        }
-        .nav-link:hover {
-            color: #e67e22 !important;
-        }
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-            background-size: cover;
-            background-position: center;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .btn-order {
-            background: #25d366;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: 0.3s;
-            border: none;
-        }
-        .btn-order:hover {
-            background: #20b859;
-            transform: scale(1.05);
-            color: white;
-        }
-        .btn-menu {
-            background: #e67e22;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-        .btn-menu:hover {
-            background: #d35400;
-            color: white;
-        }
-        /* Section titles */
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #e67e22;
-            margin: 10px auto;
-        }
-        /* Menu cards */
-        .menu-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            margin-bottom: 30px;
-        }
-        .menu-card:hover {
-            transform: translateY(-8px);
-        }
-        .menu-img {
-            height: 200px;
-            object-fit: cover;
-            width: 100%;
-            background-color: #f0e6df;
-        }
-        .menu-body {
-            padding: 1.2rem;
-        }
-        .menu-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        .menu-price {
-            color: #e67e22;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        /* About & Contact */
-        .info-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            height: 100%;
-        }
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: 0.3s;
-            z-index: 1000;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            color: white;
-        }
-        footer {
-            background: #1e2a36;
-            color: #ccc;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .section-title { font-size: 1.8rem; }
-            .navbar-brand { font-size: 1.4rem; letter-spacing: 1px; word-spacing: 4px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rashmy's Food | Shawarma | Cakes | Chapati | Lusaka</title>
+
+<meta name="description" content="Order delicious shawarma, fresh cakes and soft chapati in Lusaka. Rashmy's Food delivers fresh daily. Order on WhatsApp.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+background:#fffaf4;
+color:#2c3e50;
+scroll-padding-top:80px;
+}
+
+/* NAVBAR */
+.navbar{
+background:white;
+box-shadow:0 3px 18px rgba(0,0,0,0.07);
+padding:14px 0;
+}
+
+.navbar-brand{
+font-weight:800;
+font-size:1.8rem;
+color:#e67e22 !important;
+letter-spacing:2px;
+word-spacing:8px;
+}
+
+.navbar-brand span{
+color:#2c3e50;
+}
+
+.nav-link{
+font-weight:600;
+color:#2c3e50 !important;
+margin:0 12px;
+}
+
+.nav-link:hover{
+color:#e67e22 !important;
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop");
+
+background-size:cover;
+background-position:center;
+min-height:92vh;
+
+display:flex;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:3.6rem;
+font-weight:800;
+letter-spacing:3px;
+word-spacing:12px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:10px;
+margin-bottom:28px;
+}
+
+/* BUTTONS */
+
+.btn-order{
+background:#25d366;
+border:none;
+padding:14px 32px;
+font-weight:600;
+border-radius:40px;
+}
+
+.btn-order:hover{
+background:#1fb659;
+transform:scale(1.05);
+}
+
+.btn-menu{
+background:#e67e22;
+color:white;
+padding:14px 32px;
+border-radius:40px;
+margin-left:10px;
+font-weight:600;
+}
+
+.btn-menu:hover{
+background:#cf6d15;
+}
+
+/* TITLES */
+
+.title{
+text-align:center;
+font-size:2.3rem;
+font-weight:700;
+margin-bottom:45px;
+position:relative;
+}
+
+.title::after{
+content:"";
+width:70px;
+height:3px;
+background:#e67e22;
+display:block;
+margin:10px auto;
+}
+
+/* MENU CARDS */
+
+.card-food{
+border-radius:18px;
+overflow:hidden;
+background:white;
+box-shadow:0 12px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+margin-bottom:30px;
+}
+
+.card-food:hover{
+transform:translateY(-8px);
+}
+
+.card-food img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.price{
+color:#e67e22;
+font-weight:700;
+}
+
+/* INFO */
+
+.info-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+position:fixed;
+bottom:22px;
+right:22px;
+background:#25d366;
+width:65px;
+height:65px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:28px;
+color:white;
+box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+background:#1e2a36;
+color:#bbb;
+padding:35px 0;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.1rem;
+word-spacing:6px;
+}
+
+.navbar-brand{
+font-size:1.4rem;
+word-spacing:5px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Rashmy's <span>Food</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg fixed-top">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Rashmy's Food</h1>
-            <p>Authentic Shawarma • Fresh Cakes • Soft Chapati • Delivered to your door</p>
-            <a href="https://wa.me/260964173406?text=Hello%20Rashmy's%20Food%2C%20I%20want%20to%20place%20an%20order" class="btn btn-order me-2" target="_blank"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
-            <a href="#menu" class="btn btn-menu">View Menu</a>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- Menu Section (Shawarma, Cakes, Chapati) -->
-    <section id="menu" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Our Specialties</h2>
-            <div class="row">
-                <!-- Chicken Shawarma -->
-                <div class="col-md-4">
-                    <div class="menu-card">
-                        <img src="https://images.pexels.com/photos/27398304/pexels-photo-27398304.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" class="menu-img" alt="Chicken Shawarma">
-                        <div class="menu-body">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="menu-title">Chicken Shawarma</h5>
-                                <span class="menu-price">K50</span>
-                            </div>
-                            <p class="text-muted small">Grilled chicken, garlic sauce, pickles, wrapped in fresh pita.</p>
-                            <a href="https://wa.me/260964173406?text=I'd%20like%20to%20order%20Chicken%20Shawarma" class="btn btn-sm btn-outline-success">Order via WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Beef Shawarma -->
-                <div class="col-md-4">
-                    <div class="menu-card">
-                        <img src="https://images.pexels.com/photos/27424293/pexels-photo-27424293.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" class="menu-img" alt="Beef Shawarma">
-                        <div class="menu-body">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="menu-title">Beef Shawarma</h5>
-                                <span class="menu-price">K55</span>
-                            </div>
-                            <p class="text-muted small">Spiced beef, tahini sauce, fresh veggies.</p>
-                            <a href="https://wa.me/260964173406?text=I'd%20like%20to%20order%20Beef%20Shawarma" class="btn btn-sm btn-outline-success">Order via WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Soft Chapati -->
-                <div class="col-md-4">
-                    <div class="menu-card">
-                        <img src="https://images.pexels.com/photos/6133559/pexels-photo-6133559.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" class="menu-img" alt="Soft Chapati">
-                        <div class="menu-body">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="menu-title">Soft Chapati</h5>
-                                <span class="menu-price">K15</span>
-                            </div>
-                            <p class="text-muted small">Freshly made, soft layered chapati – perfect with tea or curry.</p>
-                            <a href="https://wa.me/260964173406?text=I'd%20like%20to%20order%20Soft%20Chapati" class="btn btn-sm btn-outline-success">Order via WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Chocolate Cake -->
-                <div class="col-md-4">
-                    <div class="menu-card">
-                        <img src="https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" class="menu-img" alt="Chocolate Cake">
-                        <div class="menu-body">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="menu-title">Chocolate Cake</h5>
-                                <span class="menu-price">K70</span>
-                            </div>
-                            <p class="text-muted small">Rich, moist chocolate cake with ganache.</p>
-                            <a href="https://wa.me/260964173406?text=I'd%20like%20to%20order%20Chocolate%20Cake" class="btn btn-sm btn-outline-success">Order via WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Vanilla Cake -->
-                <div class="col-md-4">
-                    <div class="menu-card">
-                        <img src="https://images.pexels.com/photos/1126240/pexels-photo-1126240.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" class="menu-img" alt="Vanilla Cake">
-                        <div class="menu-body">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="menu-title">Vanilla Cake</h5>
-                                <span class="menu-price">K60</span>
-                            </div>
-                            <p class="text-muted small">Classic vanilla sponge with buttercream.</p>
-                            <a href="https://wa.me/260964173406?text=I'd%20like%20to%20order%20Vanilla%20Cake" class="btn btn-sm btn-outline-success">Order via WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Chapati Wrap (Shawarma Style) -->
-                <div class="col-md-4">
-                    <div class="menu-card">
-                        <img src="https://images.pexels.com/photos/27424297/pexels-photo-27424297.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" class="menu-img" alt="Chapati Wrap">
-                        <div class="menu-body">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="menu-title">Chapati Wrap (Shawarma Style)</h5>
-                                <span class="menu-price">K45</span>
-                            </div>
-                            <p class="text-muted small">Shawarma filling wrapped in soft chapati.</p>
-                            <a href="https://wa.me/260964173406?text=I'd%20like%20to%20order%20Chapati%20Wrap" class="btn btn-sm btn-outline-success">Order via WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<a class="navbar-brand" href="#">
+Rashmy's <span>Food</span>
+</a>
 
-    <!-- About Section (updated) -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="info-card">
-                        <i class="fas fa-utensils fa-3x" style="color:#e67e22;"></i>
-                        <h3 class="mt-3">About Rashmy's Food</h3>
-                        <p>We specialize in <strong>shawarma, fresh cakes, and soft chapati</strong> – made with love daily. Our shawarma is marinated for hours, cakes are baked fresh, and chapati is rolled by hand. Whether you crave a quick wrap or a sweet treat, we deliver across Lusaka.</p>
-                        <p>We offer takeaway and free delivery within Lusaka for orders above K150. Our mission is to make every meal feel like home.</p>
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> 14 Great East Road, Lusaka (near Arcades)</p>
-                        <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Mon-Sun 11am – 10pm</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" class="img-fluid rounded-4 shadow" alt="Kitchen">
-                </div>
-            </div>
-        </div>
-    </section>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-    <!-- Contact & Map Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="info-card">
-                        <h4><i class="fab fa-whatsapp text-success"></i> Order via WhatsApp</h4>
-                        <p>Click the button below to send us a message. We'll confirm your order and delivery time.</p>
-                        <a href="https://wa.me/260964173406?text=Hello%20Rashmy's%20Food%2C%20I%20want%20to%20place%20an%20order" class="btn btn-order" target="_blank"><i class="fab fa-whatsapp"></i> Order Now</a>
-                        <hr>
-                        <p><i class="fas fa-phone-alt"></i> <strong>Call us:</strong> <a href="tel:+260964173406">+260 964 173406</a></p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> rashmysfood@example.com</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="info-card">
-                        <h4><i class="fas fa-map-marked-alt"></i> Find Us</h4>
-                        <div class="ratio ratio-16x9 mt-3">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.508213473845!2d28.322817!3d-15.387526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1940f2f5b0c4a2b3%3A0x3b4c5d6e7f8a9b0c!2sLusaka%2C%20Zambia!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="collapse navbar-collapse" id="nav">
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2025 Rashmy's Food. All rights reserved. | Designed by Moyo Web & AI Solutions</p>
-            <p><i class="fas fa-heart text-danger"></i> Serving Lusaka – Shawarma, Cakes & Chapati made fresh daily.</p>
-        </div>
-    </footer>
+<ul class="navbar-nav ms-auto">
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/260964173406?text=Hello%20Rashmy's%20Food%2C%20I%20want%20to%20place%20an%20order" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<li class="nav-item">
+<a class="nav-link" href="#menu">Menu</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<section id="home" class="hero">
+
+<div class="container">
+
+<h1>
+Rashmy's Food
+</h1>
+
+<p>
+Fresh Shawarma • Delicious Cakes • Soft Chapati in Lusaka
+</p>
+
+<a target="_blank"
+href="https://wa.me/260964173406?text=Hello%20Rashmy's%20Food,%20I%20want%20to%20order%20shawarma%20or%20cake%20or%20chapati"
+class="btn btn-order">
+
+<i class="fab fa-whatsapp"></i>
+Order Now
+</a>
+
+<a href="#menu" class="btn btn-menu">
+
+View Menu
+
+</a>
+
+</div>
+
+</section>
+
+<section id="menu" class="py-5">
+
+<div class="container">
+
+<h2 class="title">
+Popular Food
+</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card-food">
+
+<img src="https://images.unsplash.com/photo-1529563021893-cc83c992d75d?q=80&w=900&auto=format&fit=crop">
+
+<div class="p-3">
+
+<h5>
+Chicken Shawarma
+</h5>
+
+<p>
+Grilled chicken with garlic sauce
+</p>
+
+<span class="price">
+K50
+</span>
+
+<br><br>
+
+<a target="_blank"
+href="https://wa.me/260964173406?text=I%20want%20Chicken%20Shawarma"
+class="btn btn-sm btn-outline-success">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card-food">
+
+<img src="https://images.unsplash.com/photo-1604908176997-4315c4a0b4c7?q=80&w=900&auto=format&fit=crop">
+
+<div class="p-3">
+
+<h5>
+Beef Shawarma
+</h5>
+
+<p>
+Juicy beef shawarma wrap
+</p>
+
+<span class="price">
+K55
+</span>
+
+<br><br>
+
+<a target="_blank"
+href="https://wa.me/260964173406?text=I%20want%20Beef%20Shawarma"
+class="btn btn-sm btn-outline-success">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card-food">
+
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=900&auto=format&fit=crop">
+
+<div class="p-3">
+
+<h5>
+Chocolate Cake
+</h5>
+
+<p>
+Fresh baked chocolate cake
+</p>
+
+<span class="price">
+K70
+</span>
+
+<br><br>
+
+<a target="_blank"
+href="https://wa.me/260964173406?text=I%20want%20Chocolate%20Cake"
+class="btn btn-sm btn-outline-success">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card-food">
+
+<img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?q=80&w=900&auto=format&fit=crop">
+
+<div class="p-3">
+
+<h5>
+Vanilla Cake
+</h5>
+
+<p>
+Soft vanilla sponge cake
+</p>
+
+<span class="price">
+K60
+</span>
+
+<br><br>
+
+<a target="_blank"
+href="https://wa.me/260964173406?text=I%20want%20Vanilla%20Cake"
+class="btn btn-sm btn-outline-success">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card-food">
+
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=900&auto=format&fit=crop">
+
+<div class="p-3">
+
+<h5>
+Soft Chapati
+</h5>
+
+<p>
+Fresh homemade chapati
+</p>
+
+<span class="price">
+K15
+</span>
+
+<br><br>
+
+<a target="_blank"
+href="https://wa.me/260964173406?text=I%20want%20Chapati"
+class="btn btn-sm btn-outline-success">
+
+Order
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="py-5 bg-light">
+
+<div class="container">
+
+<h2 class="title">
+About Us
+</h2>
+
+<div class="info-box">
+
+We specialize in shawarma, cakes and chapati made fresh daily.
+
+Our goal is to provide tasty affordable food in Lusaka.
+
+We prepare every order with care to ensure quality taste and customer satisfaction.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="py-5">
+
+<div class="container">
+
+<h2 class="title">
+Contact
+</h2>
+
+<div class="info-box">
+
+<p>
+
+<i class="fab fa-whatsapp text-success"></i>
+
+WhatsApp Orders:
+
+<a href="https://wa.me/260964173406">
+
++260 964 173406
+
+</a>
+
+</p>
+
+<p>
+
+<i class="fas fa-map-marker-alt"></i>
+
+Lusaka Zambia
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container text-center">
+
+© Rashmy's Food
+
+<br>
+
+Best Shawarma Cakes and Chapati in Lusaka
+
+</div>
+
+</footer>
+
+<a class="whatsapp"
+target="_blank"
+href="https://wa.me/260964173406?text=Hello%20Rashmy's%20Food,%20I%20want%20to%20order">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
